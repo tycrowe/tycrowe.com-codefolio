@@ -4,7 +4,6 @@ import boto3
 
 
 # Constants
-QUERY_STRING_PARAMETERS = 'queryStringParameters'
 LIMIT = 'limit'
 NEXT_TOKEN = 'nextToken'
 DEFAULT_LIMIT = 10
@@ -16,9 +15,9 @@ def get_query_parameters(event):
     :param event:   Event data passed to the function
     :return:        Tuple containing limit and next token
     """
-    query_params = event.get(QUERY_STRING_PARAMETERS, {})
-    limit = int(query_params.get(LIMIT, DEFAULT_LIMIT))
-    next_token = query_params.get(NEXT_TOKEN)
+    query_params = event.get("queryStringParameters", {})
+    limit = int(query_params.get(LIMIT, DEFAULT_LIMIT)) if query_params else DEFAULT_LIMIT
+    next_token = query_params.get(NEXT_TOKEN) if query_params else None
     return limit, next_token
 
 
