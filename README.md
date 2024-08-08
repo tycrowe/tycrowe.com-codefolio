@@ -29,6 +29,25 @@ Technology Stack:
 4. Set up the environment variables: `export TABLE_NAME=<your_table_name>`
 5. Run the project: `python main.py`
 
+### DynamoDB Table Schema
+```json
+{
+    "TableName": "YourTableName",
+    "KeySchema": [
+        {"AttributeName": "PK", "KeyType": "HASH"},
+        {"AttributeName": "SK", "KeyType": "RANGE"}
+    ],
+    "AttributeDefinitions": [
+        {"AttributeName": "PK", "AttributeType": "S"},
+        {"AttributeName": "SK", "AttributeType": "S"}
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+    }
+}
+```
+
 ## Usage
 
 The application exposes a RESTful API with the following endpoint:
