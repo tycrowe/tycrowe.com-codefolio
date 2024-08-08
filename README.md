@@ -3,6 +3,8 @@
 ## Project Summary:
 The Codefolio Showcase Platform is a cloud-native application designed to dynamically display software projects in a portfolio on a personal or company website. Utilizing a serverless architecture on AWS, the platform offers a cost-effective, scalable, and easy-to-manage solution for developers and companies to highlight their projects to potential clients or employers. The platform features a DynamoDB table for storing project data, a Lambda function for backend logic, an API Gateway for RESTful endpoint exposure, and a CloudFormation template for resource orchestration.
 
+**What's featured here is the Lambda code that is part of the tech stack below.**
+
 ## Objective:
 
 To develop a scalable, serverless platform that allows for the efficient showcasing of software projects on a website, with the goals of maximizing performance, minimizing costs, and providing an intuitive management interface for project data.
